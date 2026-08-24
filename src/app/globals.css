@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), sans-serif;
+  --font-serif: var(--font-playfair), serif;
+  --color-brandBlue: var(--brand-blue);
+  --color-brandGreen: var(--brand-green);
+  --color-brandOrange: var(--brand-orange);
+  --color-brandPurple: var(--brand-purple);
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-green: var(--brand-green);
+  --color-brand-orange: var(--brand-orange);
+  --color-brand-purple: var(--brand-purple);
+}
+
+:root {
+  --background: #fdfbf7;
+  --foreground: #12101a;
+  --brand-blue: #2563eb;
+  --brand-green: #16a34a;
+  --brand-orange: #ea580c;
+  --brand-purple: #7c3aed;
+}
+
+[class~="dark"] {
+  --background: #030014;
+  --foreground: #f3efff;
+  --brand-blue: #38bdf8;
+  --brand-green: #4ade80;
+  --brand-orange: #fb923c;
+  --brand-purple: #a855f7;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, .font-title {
+  font-family: var(--font-serif);
+}
+
+/* --- PREMIUM BUTTON STYLE --- */
+.premium-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.2rem;
+  padding: 0 2.2rem;
+  border-radius: 14px;
+  background: var(--foreground);
+  color: var(--background) !important;
+  border: 1px solid rgba(128, 128, 128, 0.1);
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  transform: translateZ(0);
+}
+
+.premium-button:hover {
+  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.2);
+  transform: translateY(-2px);
+}
+
+.premium-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(82.3deg, var(--brand-purple) 10.8%, var(--brand-blue) 94.3%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  z-index: 0;
+}
+
+.premium-button:hover::before {
+  transform: scaleX(1);
+}
+
+.premium-button-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Secondary Style */
+.premium-button-secondary {
+  background: transparent;
+  color: var(--foreground) !important;
+  border: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+.premium-button-secondary:hover {
+  background: var(--foreground);
+  color: var(--background) !important;
+  border-color: var(--foreground);
+}
+
+.premium-button-secondary::before {
+  display: none;
+}
