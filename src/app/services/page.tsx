@@ -30,7 +30,7 @@ const detailedServices = [
       "Clean, scalable, and modular code",
       "SEO-friendly header tags & performance"
     ],
-    image: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1547082299-de196ea013d6?auto=format&fit=crop&w=600&q=80",
     cta: "Start Web Project"
   },
   {
@@ -60,7 +60,7 @@ const detailedServices = [
       "Reusable design component systems",
       "Interactive clickable prototypes"
     ],
-    image: "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=600&q=80",
     cta: "Design My UI"
   },
   {
@@ -105,7 +105,7 @@ const detailedServices = [
       "Twilio SMS & email delivery gateways",
       "Social login integrations"
     ],
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80",
     cta: "Integrate APIs"
   },
   {
@@ -120,7 +120,7 @@ const detailedServices = [
       "ACF and custom gutenberg blocks",
       "Page speed speed-up solutions"
     ],
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80",
     cta: "Setup My CMS"
   },
   {
@@ -135,7 +135,7 @@ const detailedServices = [
       "Automated CI/CD code deployments",
       "Uptime and server health monitoring"
     ],
-    image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80",
     cta: "Configure Hosting"
   }
 ];
@@ -163,7 +163,7 @@ const techStack = [
   { name: "GitHub", icon: "github/github-original", borderHoverColor: "#808080", shadowColor: "rgba(128, 128, 128, 0.15)" },
   { name: "Docker", icon: "docker/docker-original", borderHoverColor: "#2496ed", shadowColor: "rgba(36, 150, 237, 0.15)" },
   { name: "Python", icon: "python/python-original", borderHoverColor: "#3776ab", shadowColor: "rgba(55, 118, 171, 0.15)" },
-  { name: "AWS", icon: "amazonwebservices/amazonwebservices-line", borderHoverColor: "#ff9900", shadowColor: "rgba(255, 153, 0, 0.15)" },
+  { name: "AWS", icon: "amazonwebservices/amazonwebservices-original-wordmark", borderHoverColor: "#ff9900", shadowColor: "rgba(255, 153, 0, 0.15)" },
   { name: "Redux", icon: "redux/redux-original", borderHoverColor: "#764abc", shadowColor: "rgba(118, 74, 188, 0.15)" }
 ];
 
@@ -211,8 +211,8 @@ export default function ServicesPage() {
                     <div className="p-3.5 bg-foreground/5 rounded-2xl border border-foreground/10 flex items-center justify-center">
                       {service.icon}
                     </div>
-                    <span className="text-xs font-bold uppercase tracking-widest text-foreground/30">
-                      Step {service.num}
+                    <span className="text-sm font-bold uppercase tracking-widest text-brandBlue bg-brandBlue/5 px-3 py-1.5 rounded-full">
+                      {service.num}
                     </span>
                   </div>
                   
@@ -303,6 +303,18 @@ export default function ServicesPage() {
                       src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${tech.icon}.svg`} 
                       alt={tech.name}
                       className={`w-10 h-10 object-contain ${isExpress || isNext ? "dark:invert" : ""}`}
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        if (tech.name === "Express") {
+                          target.src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg";
+                        }
+                        if (tech.name === "NextJS") {
+                          target.src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg";
+                        }
+                        if (tech.name === "AWS") {
+                          target.src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg";
+                        }
+                      }}
                     />
                   </div>
                   <span className="text-foreground/80 font-bold text-xs tracking-tight group-hover:text-foreground transition-colors">
