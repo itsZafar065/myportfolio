@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { Code2, Smartphone, Globe, LayoutDashboard, Database, ShieldCheck } from "lucide-react";
+import { Code2, Smartphone, Globe, LayoutDashboard, Database, ShieldCheck, Laptop, ShoppingBag, Cloud } from "lucide-react";
 
 const services = [
   {
@@ -12,32 +12,50 @@ const services = [
   {
     title: "WordPress Development",
     desc: "Tailored themes, WooCommerce stores, and custom plugins tailored to your business needs.",
-    icon: <Smartphone className="text-brandBlue" />,
+    icon: <Laptop className="text-brandBlue" />,
     gradient: "from-brandBlue/20",
   },
   {
-    title: "UI/UX Figma Design",
-    desc: "Wireframes and high-fidelity prototypes designed in Figma with focus on user conversion.",
-    icon: <LayoutDashboard className="text-brandOrange" />,
-    gradient: "from-brandOrange/20",
-  },
-  {
-    title: "Project Management",
-    desc: "Scope optimization, timeline tracking, and agile management ensuring successful deliveries.",
-    icon: <Database className="text-brandGreen" />,
+    title: "Mobile App Development",
+    desc: "Native and cross-platform mobile applications for iOS and Android built with React Native.",
+    icon: <Smartphone className="text-brandGreen" />,
     gradient: "from-brandGreen/20",
   },
   {
-    title: "API Integrations",
-    desc: "Seamless connection of external microservices, payment gateways, and databases.",
-    icon: <Globe className="text-brandPurple" />,
+    title: "E-Commerce Solutions",
+    desc: "High-conversion online stores featuring customized WooCommerce, Shopify, and Stripe integrations.",
+    icon: <ShoppingBag className="text-brandOrange" />,
+    gradient: "from-brandOrange/20",
+  },
+  {
+    title: "UI/UX Figma Design",
+    desc: "User-centric wireframes and high-fidelity responsive prototypes designed directly in Figma.",
+    icon: <LayoutDashboard className="text-brandPurple" />,
     gradient: "from-brandPurple/20",
   },
   {
-    title: "Performance & SEO",
-    desc: "Optimization of website loading speed, accessibility scores, and search engine visibility.",
-    icon: <ShieldCheck className="text-brandBlue" />,
+    title: "API & Cloud Integrations",
+    desc: "Seamless connection of external microservices, custom APIs, and payment gateways.",
+    icon: <Globe className="text-brandBlue" />,
     gradient: "from-brandBlue/20",
+  },
+  {
+    title: "Performance & SEO",
+    desc: "Technical optimization of loading speeds, accessibility scores, and Google search visibility.",
+    icon: <ShieldCheck className="text-brandGreen" />,
+    gradient: "from-brandGreen/20",
+  },
+  {
+    title: "Cloud & DevOps Solutions",
+    desc: "Secure deployments, hosting setups on AWS or Vercel, Docker environments, and automated CI/CD.",
+    icon: <Cloud className="text-brandOrange" />,
+    gradient: "from-brandOrange/20",
+  },
+  {
+    title: "Tech Consulting & Scoping",
+    desc: "Agile sprints, architecture design, and direct project delivery mapping client requirements.",
+    icon: <Database className="text-brandPurple" />,
+    gradient: "from-brandPurple/20",
   }
 ];
 
