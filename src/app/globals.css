@@ -27,7 +27,7 @@
 }
 
 [class~="dark"] {
-  --background: #030014;
+  --background: #08051a;
   --foreground: #f3efff;
   --brand-blue: #38bdf8;
   --brand-green: #4ade80;
@@ -39,6 +39,11 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+}
+
+[class~="dark"] body {
+  background: radial-gradient(circle at 50% 10%, #150f38 0%, #08051a 100%);
+  background-attachment: fixed;
 }
 
 h1, h2, h3, .font-title {
