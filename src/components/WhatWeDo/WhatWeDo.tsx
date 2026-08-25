@@ -96,10 +96,10 @@ export default function WhatWeDo() {
 
             <div className="space-y-6">
               <p className="text-foreground/90 text-base md:text-lg leading-relaxed font-light">
-                I am a dedicated **Full Stack Developer** with a proven track record of converting abstract layouts into fully scalable and interactive web applications. 
+                I am a dedicated <strong>Full Stack Developer</strong> with a proven track record of converting abstract layouts into fully scalable and interactive web applications. 
               </p>
               <p className="text-foreground/60 text-sm md:text-base leading-relaxed border-l-2 border-brandPurple/30 pl-6 font-light italic">
-                With **2 years of solid freelancing experience**, I understand project life cycles end-to-end. My background includes **6 months of Project Management**, enabling me to plan and scoping workflows effectively, alongside **5 months of specialized WordPress development** delivering high-performance e-commerce and cms structures.
+                With <strong>2 years of solid freelancing experience</strong>, I understand project life cycles end-to-end. My background includes <strong>6 months of Project Management</strong>, enabling me to plan and scoping workflows effectively, alongside <strong>5 months of specialized WordPress development</strong> delivering high-performance e-commerce and cms structures.
               </p>
             </div>
 
