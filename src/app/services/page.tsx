@@ -90,7 +90,7 @@ const detailedServices = [
       "Multi-currency support setups",
       "Secure encrypted checkouts"
     ],
-    image: "https://images.unsplash.com/photo-1563013544-824ae1d704d3?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1580519542036-c47de6196ba5?auto=format&fit=crop&w=600&q=80",
     cta: "Configure Payments"
   },
   {
@@ -105,7 +105,7 @@ const detailedServices = [
       "Twilio SMS & email delivery gateways",
       "Social login integrations"
     ],
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80",
     cta: "Integrate APIs"
   },
   {
@@ -120,7 +120,7 @@ const detailedServices = [
       "ACF and custom gutenberg blocks",
       "Page speed speed-up solutions"
     ],
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80",
     cta: "Setup My CMS"
   },
   {
@@ -135,7 +135,7 @@ const detailedServices = [
       "Automated CI/CD code deployments",
       "Uptime and server health monitoring"
     ],
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80",
     cta: "Configure Hosting"
   }
 ];
@@ -169,54 +169,54 @@ const techStack = [
 
 export default function ServicesPage() {
   return (
-    <main className="bg-background pt-32 pb-20 transition-colors duration-300">
+    <main className="bg-background pt-24 md:pt-32 pb-16 md:pb-20 transition-colors duration-300">
       
       {/* Hero Header */}
-      <section className="relative pb-16 overflow-hidden">
+      <section className="relative pb-10 md:pb-16 overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[400px] bg-brandBlue/5 blur-[120px] rounded-full pointer-events-none" />
         
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center space-y-6">
           <span className="text-brandPurple font-bold tracking-[0.3em] uppercase text-xs">
             / Professional Services
           </span>
-          <h1 className="text-4xl md:text-6xl font-black text-foreground leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-black text-foreground leading-tight">
             Web Development <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandPurple to-brandBlue">Services</span>
           </h1>
-          <p className="text-foreground/70 text-base md:text-lg max-w-2xl mx-auto leading-relaxed font-light">
+          <p className="text-foreground/70 text-sm sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed font-light">
             I help businesses grow with tailored digital solutions, fast load times, and custom user-centric UI/UX layouts.
           </p>
         </div>
       </section>
 
       {/* Alternating Services Sections */}
-      <section className="py-12">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 space-y-32">
+      <section className="py-8 md:py-12">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 space-y-16 sm:space-y-24 md:space-y-32">
           {detailedServices.map((service, index) => {
             const isEven = index % 2 === 0;
             return (
               <div 
                 key={service.num} 
-                className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center"
+                className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-20 items-center"
               >
                 
                 {/* Left/Right Text Column */}
                 <motion.div 
-                  initial={{ opacity: 0, x: isEven ? -40 : 40 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
                   viewport={{ once: true, margin: "-100px" }}
                   className={`lg:col-span-6 space-y-6 ${isEven ? "lg:order-1" : "lg:order-2"}`}
                 >
                   <div className="flex items-center gap-4">
-                    <div className="p-3.5 bg-foreground/5 rounded-2xl border border-foreground/10 flex items-center justify-center">
+                    <div className="p-3 bg-foreground/5 rounded-2xl border border-foreground/10 flex items-center justify-center">
                       {service.icon}
                     </div>
-                    <span className="text-sm font-bold uppercase tracking-widest text-brandBlue bg-brandBlue/5 px-3 py-1.5 rounded-full">
+                    <span className="text-xs font-bold uppercase tracking-widest text-brandBlue bg-brandBlue/5 px-3 py-1.5 rounded-full">
                       {service.num}
                     </span>
                   </div>
                   
-                  <h3 className="text-2xl md:text-3xl font-bold text-foreground">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground">
                     {service.title}
                   </h3>
                   
@@ -233,7 +233,7 @@ export default function ServicesPage() {
                     ))}
                   </ul>
 
-                  <div className="pt-4">
+                  <div className="pt-2">
                     <Link 
                       href="/contact" 
                       className="premium-button text-xs"
@@ -247,13 +247,13 @@ export default function ServicesPage() {
 
                 {/* Left/Right Mockup Image Column */}
                 <motion.div 
-                  initial={{ opacity: 0, x: isEven ? 40 : -40 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
                   viewport={{ once: true, margin: "-100px" }}
                   className={`lg:col-span-6 relative ${isEven ? "lg:order-2" : "lg:order-1"}`}
                 >
-                  <div className="relative w-full aspect-[4/3] rounded-[32px] overflow-hidden border border-foreground/10 shadow-2xl bg-foreground/5 group">
+                  <div className="relative w-full aspect-[4/3] rounded-[20px] sm:rounded-[32px] overflow-hidden border border-foreground/10 shadow-2xl bg-foreground/5 group">
                     <img 
                       src={service.image} 
                       alt={service.title}
@@ -270,13 +270,13 @@ export default function ServicesPage() {
       </section>
 
       {/* Custom Designed Grid Technology Stack (Exactly like Screenshot) */}
-      <section className="py-24 bg-foreground/[0.01] dark:bg-white/[0.01] border-y border-foreground/5 relative overflow-hidden transition-colors duration-300">
+      <section className="py-16 md:py-24 bg-foreground/[0.01] dark:bg-white/[0.01] border-y border-foreground/5 relative overflow-hidden transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-          <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
+          <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16 space-y-4">
             <span className="text-brandPurple font-bold tracking-[0.3em] uppercase text-xs">
               / Stacks &amp; Frameworks
             </span>
-            <h2 className="text-3xl md:text-5xl font-black text-foreground">
+            <h2 className="text-2xl md:text-5xl font-black text-foreground">
               Our Technology <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandPurple to-brandBlue font-bold">Stack</span>
             </h2>
             <p className="text-foreground/60 text-sm md:text-base font-light">
@@ -284,7 +284,7 @@ export default function ServicesPage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6">
             {techStack.map((tech, index) => {
               const isExpress = tech.name === "Express";
               const isNext = tech.name === "NextJS";
@@ -296,13 +296,13 @@ export default function ServicesPage() {
                     borderColor: tech.borderHoverColor,
                     boxShadow: `0 12px 30px ${tech.shadowColor}`
                   }}
-                  className="p-6 rounded-2xl border border-foreground/5 bg-background dark:bg-[#08051a] flex flex-col items-center justify-center gap-3 transition-all duration-300 group cursor-pointer"
+                  className="p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-foreground/5 bg-background dark:bg-[#08051a] flex flex-col items-center justify-center gap-3 transition-all duration-300 group cursor-pointer"
                 >
-                  <div className="w-12 h-12 flex items-center justify-center transition-transform group-hover:scale-110 duration-300">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center transition-transform group-hover:scale-110 duration-300">
                     <img 
                       src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${tech.icon}.svg`} 
                       alt={tech.name}
-                      className={`w-10 h-10 object-contain ${isExpress || isNext ? "dark:invert" : ""}`}
+                      className={`w-8 h-8 sm:w-10 sm:h-10 object-contain ${isExpress || isNext ? "dark:invert" : ""}`}
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;
                         if (tech.name === "Express") {
@@ -317,7 +317,7 @@ export default function ServicesPage() {
                       }}
                     />
                   </div>
-                  <span className="text-foreground/80 font-bold text-xs tracking-tight group-hover:text-foreground transition-colors">
+                  <span className="text-foreground/80 font-bold text-xs tracking-tight group-hover:text-foreground transition-colors text-center">
                     {tech.name}
                   </span>
                 </motion.div>
@@ -328,13 +328,13 @@ export default function ServicesPage() {
       </section>
 
       {/* Footer Call to Action Banner */}
-      <section className="py-24">
+      <section className="py-16 md:py-24">
         <div className="max-w-5xl mx-auto px-6">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="p-10 md:p-16 rounded-[40px] bg-foreground/5 border border-foreground/10 text-center relative overflow-hidden shadow-2xl"
+            className="p-8 sm:p-10 md:p-16 rounded-3xl sm:rounded-[40px] bg-foreground/5 border border-foreground/10 text-center relative overflow-hidden shadow-2xl"
           >
             {/* Background blur decorative lights */}
             <div className="absolute -top-12 -left-12 w-48 h-48 bg-brandPurple/10 blur-[80px] rounded-full pointer-events-none" />
@@ -344,8 +344,8 @@ export default function ServicesPage() {
               <span className="text-brandBlue font-bold tracking-[0.3em] uppercase text-[10px] md:text-xs block">
                 / Project Inquiry
               </span>
-              <h2 className="text-3xl md:text-5xl font-black text-foreground leading-tight">
-                Ready to Build a Scalable <br />
+              <h2 className="text-2xl sm:text-3xl md:text-5xl font-black text-foreground leading-tight">
+                Ready to Build a Scalable <br className="hidden sm:block" />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandPurple to-brandBlue font-bold">Web Product?</span>
               </h2>
               <p className="text-foreground/60 text-sm md:text-base leading-relaxed font-light">
