@@ -26,7 +26,7 @@ export default function TechMarquee() {
   const marqueeItems = [...technologies, ...technologies, ...technologies];
 
   return (
-    <section className="py-12 bg-background/50 border-y border-foreground/5 relative overflow-hidden transition-colors duration-300">
+    <section className="py-12 bg-background/50 relative overflow-hidden transition-colors duration-300">
       
       {/* Centralized Title */}
       <div className="max-w-7xl mx-auto px-6 mb-8 text-center">
