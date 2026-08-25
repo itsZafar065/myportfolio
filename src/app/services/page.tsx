@@ -12,10 +12,10 @@ import {
   Cloud, 
   CheckCircle,
   ArrowRight,
-  Send
+  Send,
+  Database
 } from "lucide-react";
 import Link from "next/link";
-import TechMarquee from "@/components/sections/TechMarquee";
 
 const detailedServices = [
   {
@@ -30,7 +30,7 @@ const detailedServices = [
       "Clean, scalable, and modular code",
       "SEO-friendly header tags & performance"
     ],
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=600&q=80",
     cta: "Start Web Project"
   },
   {
@@ -45,7 +45,7 @@ const detailedServices = [
       "Secure SQL and NoSQL databases",
       "Scalable REST and GraphQL APIs"
     ],
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
     cta: "Build My SaaS"
   },
   {
@@ -60,7 +60,7 @@ const detailedServices = [
       "Reusable design component systems",
       "Interactive clickable prototypes"
     ],
-    image: "https://images.unsplash.com/photo-1561070791-26c113006238?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=600&q=80",
     cta: "Design My UI"
   },
   {
@@ -75,7 +75,7 @@ const detailedServices = [
       "High-speed responsive shopping carts",
       "Inventory sync configurations"
     ],
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?auto=format&fit=crop&w=600&q=80",
     cta: "Open My Store"
   },
   {
@@ -90,7 +90,7 @@ const detailedServices = [
       "Multi-currency support setups",
       "Secure encrypted checkouts"
     ],
-    image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1563013544-824ae1d704d3?auto=format&fit=crop&w=600&q=80",
     cta: "Configure Payments"
   },
   {
@@ -105,7 +105,7 @@ const detailedServices = [
       "Twilio SMS & email delivery gateways",
       "Social login integrations"
     ],
-    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80",
     cta: "Integrate APIs"
   },
   {
@@ -120,7 +120,7 @@ const detailedServices = [
       "ACF and custom gutenberg blocks",
       "Page speed speed-up solutions"
     ],
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80",
     cta: "Setup My CMS"
   },
   {
@@ -135,9 +135,36 @@ const detailedServices = [
       "Automated CI/CD code deployments",
       "Uptime and server health monitoring"
     ],
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80",
     cta: "Configure Hosting"
   }
+];
+
+const techStack = [
+  { name: "HTML5", icon: "html5/html5-original", borderHoverColor: "#e34f26", shadowColor: "rgba(227, 79, 38, 0.15)" },
+  { name: "CSS3", icon: "css3/css3-original", borderHoverColor: "#1572b6", shadowColor: "rgba(21, 114, 182, 0.15)" },
+  { name: "Javascript", icon: "javascript/javascript-original", borderHoverColor: "#f7df1e", shadowColor: "rgba(247, 223, 30, 0.15)" },
+  { name: "Typescript", icon: "typescript/typescript-original", borderHoverColor: "#3178c6", shadowColor: "rgba(49, 120, 198, 0.15)" },
+  { name: "React", icon: "react/react-original", borderHoverColor: "#61dafb", shadowColor: "rgba(97, 218, 251, 0.15)" },
+  { name: "NextJS", icon: "nextjs/nextjs-original", borderHoverColor: "#808080", shadowColor: "rgba(128, 128, 128, 0.15)" },
+  { name: "TailwindCSS", icon: "tailwindcss/tailwindcss-original", borderHoverColor: "#38bdf8", shadowColor: "rgba(56, 189, 248, 0.15)" },
+  { name: "Figma", icon: "figma/figma-original", borderHoverColor: "#f24e1e", shadowColor: "rgba(242, 78, 30, 0.15)" },
+  { name: "PHP", icon: "php/php-original", borderHoverColor: "#777bb4", shadowColor: "rgba(119, 123, 180, 0.15)" },
+  { name: "Laravel", icon: "laravel/laravel-original", borderHoverColor: "#ff2d20", shadowColor: "rgba(255, 45, 32, 0.15)" },
+  { name: "NodeJS", icon: "nodejs/nodejs-original", borderHoverColor: "#339933", shadowColor: "rgba(51, 153, 51, 0.15)" },
+  { name: "Express", icon: "express/express-original", borderHoverColor: "#808080", shadowColor: "rgba(128, 128, 128, 0.15)" },
+  { name: "MySQL", icon: "mysql/mysql-original", borderHoverColor: "#4479a1", shadowColor: "rgba(68, 121, 161, 0.15)" },
+  { name: "MongoDB", icon: "mongodb/mongodb-original", borderHoverColor: "#47a248", shadowColor: "rgba(71, 162, 72, 0.15)" },
+  { name: "PostgreSQL", icon: "postgresql/postgresql-original", borderHoverColor: "#336791", shadowColor: "rgba(51, 103, 145, 0.15)" },
+  { name: "Firebase", icon: "firebase/firebase-original", borderHoverColor: "#ffca28", shadowColor: "rgba(255, 202, 40, 0.15)" },
+  { name: "GraphQL", icon: "graphql/graphql-plain", borderHoverColor: "#e10098", shadowColor: "rgba(225, 0, 152, 0.15)" },
+  { name: "WordPress", icon: "wordpress/wordpress-plain", borderHoverColor: "#21759b", shadowColor: "rgba(33, 117, 155, 0.15)" },
+  { name: "Git", icon: "git/git-original", borderHoverColor: "#f05032", shadowColor: "rgba(240, 80, 50, 0.15)" },
+  { name: "GitHub", icon: "github/github-original", borderHoverColor: "#808080", shadowColor: "rgba(128, 128, 128, 0.15)" },
+  { name: "Docker", icon: "docker/docker-original", borderHoverColor: "#2496ed", shadowColor: "rgba(36, 150, 237, 0.15)" },
+  { name: "Python", icon: "python/python-original", borderHoverColor: "#3776ab", shadowColor: "rgba(55, 118, 171, 0.15)" },
+  { name: "AWS", icon: "amazonwebservices/amazonwebservices-line", borderHoverColor: "#ff9900", shadowColor: "rgba(255, 153, 0, 0.15)" },
+  { name: "Redux", icon: "redux/redux-original", borderHoverColor: "#764abc", shadowColor: "rgba(118, 74, 188, 0.15)" }
 ];
 
 export default function ServicesPage() {
@@ -242,8 +269,51 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Tech Stack Marquee Section */}
-      <TechMarquee />
+      {/* Custom Designed Grid Technology Stack (Exactly like Screenshot) */}
+      <section className="py-24 bg-foreground/[0.01] dark:bg-white/[0.01] border-y border-foreground/5 relative overflow-hidden transition-colors duration-300">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+          <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
+            <span className="text-brandPurple font-bold tracking-[0.3em] uppercase text-xs">
+              / Stacks &amp; Frameworks
+            </span>
+            <h2 className="text-3xl md:text-5xl font-black text-foreground">
+              Our Technology <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandPurple to-brandBlue font-bold">Stack</span>
+            </h2>
+            <p className="text-foreground/60 text-sm md:text-base font-light">
+              A comprehensive set of modern frameworks, databases, and third-party tools optimized for scalable systems.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+            {techStack.map((tech, index) => {
+              const isExpress = tech.name === "Express";
+              const isNext = tech.name === "NextJS";
+              return (
+                <motion.div
+                  key={index}
+                  whileHover={{ 
+                    y: -8,
+                    borderColor: tech.borderHoverColor,
+                    boxShadow: `0 12px 30px ${tech.shadowColor}`
+                  }}
+                  className="p-6 rounded-2xl border border-foreground/5 bg-background dark:bg-[#08051a] flex flex-col items-center justify-center gap-3 transition-all duration-300 group cursor-pointer"
+                >
+                  <div className="w-12 h-12 flex items-center justify-center transition-transform group-hover:scale-110 duration-300">
+                    <img 
+                      src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${tech.icon}.svg`} 
+                      alt={tech.name}
+                      className={`w-10 h-10 object-contain ${isExpress || isNext ? "dark:invert" : ""}`}
+                    />
+                  </div>
+                  <span className="text-foreground/80 font-bold text-xs tracking-tight group-hover:text-foreground transition-colors">
+                    {tech.name}
+                  </span>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
 
       {/* Footer Call to Action Banner */}
       <section className="py-24">
