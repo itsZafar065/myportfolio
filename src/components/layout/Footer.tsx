@@ -6,15 +6,16 @@ import Link from "next/link";
 const footerLinks = {
   navigation: [
     { name: "Home", href: "/" },
+    { name: "Services", href: "/services" },
     { name: "Portfolio", href: "/portfolio" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
   ],
   services: [
-    { name: "Full Stack Engineering", href: "#" },
-    { name: "WordPress Development", href: "#" },
-    { name: "UI/UX Design (Figma)", href: "#" },
-    { name: "Project Management", href: "#" },
+    { name: "Full Stack Engineering", href: "/services" },
+    { name: "WordPress Development", href: "/services" },
+    { name: "UI/UX Design (Figma)", href: "/services" },
+    { name: "Project Management", href: "/services" },
   ],
 };
 
