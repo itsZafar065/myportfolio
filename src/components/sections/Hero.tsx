@@ -48,35 +48,6 @@ export default function Hero() {
               </a>
             </Magnetic>
           </div>
-
-          {/* Technologies I work with */}
-          <div className="pt-8 space-y-4 max-w-md mx-auto lg:mx-0">
-            <p className="text-foreground/40 text-[10px] md:text-[11px] font-bold uppercase tracking-[0.25em]">Technologies I work with</p>
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
-              {[
-                { name: "HTML5", icon: "html5-original" },
-                { name: "CSS3", icon: "css3-original" },
-                { name: "Javascript", icon: "javascript-original" },
-                { name: "Typescript", icon: "typescript-original" },
-                { name: "React", icon: "react-original" },
-                { name: "NextJS", icon: "nextjs-original" },
-                { name: "WordPress", icon: "wordpress-plain" },
-                { name: "Figma", icon: "figma-original" }
-              ].map((tech) => (
-                <div 
-                  key={tech.name} 
-                  className="w-10 h-10 rounded-xl bg-foreground/5 border border-foreground/10 flex items-center justify-center hover:bg-foreground/10 hover:border-foreground/20 transition-all group animate-fade-in"
-                  title={tech.name}
-                >
-                  <img 
-                    src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${tech.icon === "nextjs-original" ? "nextjs/nextjs-original-wordmark" : `${tech.icon.split("-")[0]}/${tech.icon}`}.svg`} 
-                    alt={tech.name}
-                    className={`w-6 h-6 object-contain group-hover:scale-110 transition-transform ${tech.icon === "nextjs-original" ? "dark:invert" : ""}`}
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
 
         {/* RIGHT VISUAL */}
@@ -98,7 +69,7 @@ export default function Hero() {
             </div>
 
             {/* Floating Terminal Code Card */}
-            <div className="absolute bottom-[-2%] right-[-4%] sm:right-[-10%] md:right-[-15%] bg-[#080616]/90 border border-white/10 rounded-2xl p-3 sm:p-4 shadow-2xl z-20 backdrop-blur-md max-w-[180px] xs:max-w-[220px] md:max-w-[260px] font-mono text-[9px] xs:text-[10px] md:text-xs text-white/80 space-y-1.5 sm:space-y-2">
+            <div className="hidden sm:absolute bottom-[-2%] right-[-4%] sm:right-[-10%] md:right-[-15%] bg-[#080616]/90 border border-white/10 rounded-2xl p-3 sm:p-4 shadow-2xl z-20 backdrop-blur-md max-w-[180px] xs:max-w-[220px] md:max-w-[260px] font-mono text-[9px] xs:text-[10px] md:text-xs text-white/80 space-y-1.5 sm:space-y-2">
               <div className="flex items-center gap-1.5 border-b border-white/10 pb-2 mb-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-red-500" />
                 <span className="w-2.5 h-2.5 rounded-full bg-yellow-500" />

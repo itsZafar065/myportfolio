@@ -1,4 +1,5 @@
 import Hero from "@/components/sections/Hero";
+import TechMarquee from "@/components/sections/TechMarquee";
 import WhatWeDo from "@/components/WhatWeDo/WhatWeDo";
 import Services from "@/components/sections/Services";
 import Process from "@/components/Process/Process";
@@ -11,6 +12,9 @@ export default function Home() {
       
       {/* 1. Hero */}
       <Hero />
+
+      {/* 1.5. Technologies Marquee */}
+      <TechMarquee />
 
       {/* 2. Intro */}
       <WhatWeDo />
