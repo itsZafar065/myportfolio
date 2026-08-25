@@ -18,21 +18,21 @@ export default function Expertise() {
             <span className="text-brandPurple font-bold tracking-[0.3em] uppercase text-xs block mb-4">
               / My Capabilities
             </span>
-            <h2 className="text-3xl md:text-5xl font-black text-foreground mb-6 leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-black text-foreground mb-6 leading-tight">
               My Expertise in <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandPurple to-brandBlue">Digital Engineering</span>
             </h2>
-            <p className="text-foreground/60 text-lg mb-8 leading-relaxed font-light">
+            <p className="text-foreground/60 text-base md:text-lg mb-8 leading-relaxed font-light">
               I blend technical code execution with clean visuals and solid project management. Every component I build is optimized for fast performance, modern SEO, and responsiveness.
             </p>
             
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 gap-4 sm:gap-6">
               {[
                 { label: "Completed Projects", value: "10+" },
                 { label: "Client Satisfaction", value: "99%" },
               ].map((stat, i) => (
-                <div key={i} className="p-6 rounded-2xl border border-foreground/5 bg-foreground/5 dark:bg-white/5 backdrop-blur-sm">
-                  <p className="text-3xl font-bold text-foreground mb-1">{stat.value}</p>
-                  <p className="text-foreground/40 text-xs uppercase tracking-widest font-bold">{stat.label}</p>
+                <div key={i} className="p-4 sm:p-6 rounded-2xl border border-foreground/5 bg-foreground/5 dark:bg-white/5 backdrop-blur-sm">
+                  <p className="text-2xl sm:text-3xl font-bold text-foreground mb-1">{stat.value}</p>
+                  <p className="text-foreground/45 text-[10px] sm:text-xs uppercase tracking-widest font-bold">{stat.label}</p>
                 </div>
               ))}
             </div>

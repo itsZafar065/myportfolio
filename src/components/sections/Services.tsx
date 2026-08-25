@@ -7,37 +7,37 @@ const services = [
     title: "Full Stack Development",
     desc: "Bespoke web applications built with Next.js, React, and Laravel for maximum scalability.",
     icon: <Code2 className="text-brandPurple" />,
-    gradient: "group-hover:from-brandPurple/20",
+    gradient: "from-brandPurple/20",
   },
   {
     title: "WordPress Development",
     desc: "Tailored themes, WooCommerce stores, and custom plugins tailored to your business needs.",
     icon: <Smartphone className="text-brandBlue" />,
-    gradient: "group-hover:from-brandBlue/20",
+    gradient: "from-brandBlue/20",
   },
   {
     title: "UI/UX Figma Design",
     desc: "Wireframes and high-fidelity prototypes designed in Figma with focus on user conversion.",
     icon: <LayoutDashboard className="text-brandOrange" />,
-    gradient: "group-hover:from-brandOrange/20",
+    gradient: "from-brandOrange/20",
   },
   {
     title: "Project Management",
     desc: "Scope optimization, timeline tracking, and agile management ensuring successful deliveries.",
     icon: <Database className="text-brandGreen" />,
-    gradient: "group-hover:from-brandGreen/20",
+    gradient: "from-brandGreen/20",
   },
   {
     title: "API Integrations",
     desc: "Seamless connection of external microservices, payment gateways, and databases.",
     icon: <Globe className="text-brandPurple" />,
-    gradient: "group-hover:from-brandPurple/20",
+    gradient: "from-brandPurple/20",
   },
   {
     title: "Performance & SEO",
     desc: "Optimization of website loading speed, accessibility scores, and search engine visibility.",
     icon: <ShieldCheck className="text-brandBlue" />,
-    gradient: "group-hover:from-brandBlue/20",
+    gradient: "from-brandBlue/20",
   }
 ];
 
@@ -46,14 +46,52 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1,
+      staggerChildren: 0.15,
     },
   },
 };
 
 const itemVariants = {
   hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] as const } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as const } },
+};
+
+// Auto-highlight animations for scroll entrance
+const glowVariants = {
+  hidden: { opacity: 0 },
+  visible: (i: number) => ({
+    opacity: [0, 1, 1, 0],
+    transition: {
+      delay: i * 0.15 + 0.4,
+      duration: 1.4,
+      times: [0, 0.15, 0.85, 1],
+    }
+  })
+};
+
+const iconVariants = {
+  hidden: { scale: 1, rotate: 0 },
+  visible: (i: number) => ({
+    scale: [1, 1.1, 1.1, 1],
+    rotate: [0, 6, 6, 0],
+    transition: {
+      delay: i * 0.15 + 0.4,
+      duration: 1.4,
+      times: [0, 0.15, 0.85, 1],
+    }
+  })
+};
+
+const lineVariants = {
+  hidden: { width: "3rem" },
+  visible: (i: number) => ({
+    width: ["3rem", "100%", "100%", "3rem"],
+    transition: {
+      delay: i * 0.15 + 0.4,
+      duration: 1.4,
+      times: [0, 0.15, 0.85, 1],
+    }
+  })
 };
 
 export default function Services() {
@@ -90,21 +128,34 @@ export default function Services() {
               key={index}
               variants={itemVariants}
               whileHover={{ y: -10 }}
+              custom={index}
               className="group relative p-8 rounded-3xl bg-background border border-foreground/5 hover:border-foreground/10 transition-all duration-500 cursor-pointer overflow-hidden shadow-xl"
             >
-              <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+              <motion.div 
+                custom={index}
+                variants={glowVariants}
+                className={`absolute inset-0 bg-gradient-to-br ${service.gradient} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none`} 
+              />
               
               <div className="relative z-10 space-y-4">
-                <div className="w-14 h-14 bg-foreground/5 rounded-2xl flex items-center justify-center border border-foreground/10 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                <motion.div 
+                  custom={index}
+                  variants={iconVariants}
+                  className="w-14 h-14 bg-foreground/5 rounded-2xl flex items-center justify-center border border-foreground/10 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500"
+                >
                   {service.icon}
-                </div>
+                </motion.div>
                 <h3 className="text-xl font-bold text-foreground tracking-tight">{service.title}</h3>
                 <p className="text-foreground/60 text-sm leading-relaxed font-medium">
                   {service.desc}
                 </p>
                 
                 <div className="pt-4 overflow-hidden">
-                  <div className="h-[2px] w-12 bg-foreground/10 group-hover:w-full transition-all duration-700 bg-gradient-to-r from-brandPurple to-transparent" />
+                  <motion.div 
+                    custom={index}
+                    variants={lineVariants}
+                    className="h-[2px] bg-foreground/10 group-hover:w-full transition-all duration-700 bg-gradient-to-r from-brandPurple to-transparent" 
+                  />
                 </div>
               </div>
             </motion.div>

@@ -16,8 +16,8 @@ export default function WhatWeDo() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           
           {/* LEFT COLUMN: Premium Visual Representation */}
-          <div className="lg:col-span-5 relative order-2 lg:order-1">
-            <div className="relative w-full max-w-[440px] mx-auto aspect-square flex items-center justify-center">
+          <div className="lg:col-span-5 relative order-2 lg:order-1 w-full">
+            <div className="relative w-full max-w-[440px] mx-auto min-h-[380px] sm:min-h-[440px] lg:aspect-square flex items-center justify-center">
               
               {/* Decorative Frame */}
               <div className="absolute inset-0 border border-foreground/10 dark:border-white/10 rounded-[48px] rotate-3 scale-95 pointer-events-none" />
@@ -28,7 +28,7 @@ export default function WhatWeDo() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                className="w-full h-full bg-foreground/[0.02] dark:bg-white/[0.02] border border-foreground/10 dark:border-white/10 rounded-[48px] p-8 md:p-10 backdrop-blur-xl flex flex-col justify-between shadow-2xl relative overflow-hidden group hover:border-brandPurple/30 transition-all duration-500"
+                className="w-full h-full bg-foreground/[0.02] dark:bg-white/[0.02] border border-foreground/10 dark:border-white/10 rounded-[48px] p-6 sm:p-8 md:p-10 backdrop-blur-xl flex flex-col justify-between shadow-2xl relative overflow-hidden group hover:border-brandPurple/30 transition-all duration-500"
               >
                 {/* Accent glow on hover */}
                 <div className="absolute -top-12 -right-12 w-24 h-24 bg-brandPurple/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -48,7 +48,7 @@ export default function WhatWeDo() {
                   <div className="h-[1px] w-full bg-foreground/10" />
 
                   {/* Skills Grid */}
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-2 gap-3 sm:gap-4">
                     <div className="space-y-1">
                       <p className="text-2xl font-black text-foreground">10+</p>
                       <p className="text-foreground/50 text-[11px] font-bold uppercase tracking-wider">Completed Projects</p>

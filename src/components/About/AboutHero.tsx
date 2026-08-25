@@ -26,8 +26,8 @@ export default function AboutHero() {
             </span>
 
             {/* Main Playfair Display Heading */}
-            <h1 className="text-[38px] md:text-[56px] lg:text-[68px] font-black text-foreground leading-[1.15] tracking-tight">
-              Creating clean code &amp; <br className="hidden md:block" />
+            <h1 className="text-[28px] sm:text-[44px] md:text-[56px] lg:text-[68px] font-black text-foreground leading-[1.15] tracking-tight">
+              Creating clean code &amp; <br className="hidden lg:block" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandPurple via-brandBlue to-brandGreen">
                 premium digital experiences.
               </span>

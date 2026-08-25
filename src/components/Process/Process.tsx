@@ -35,7 +35,7 @@ export default function Process() {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-12 md:mb-20">
           <motion.span 
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -46,15 +46,15 @@ export default function Process() {
           <motion.h2 
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-3xl md:text-5xl font-black text-foreground mt-4"
+            className="text-2xl sm:text-3xl md:text-5xl font-black text-foreground mt-4 leading-tight"
           >
-            My 3-step process to <br />
+            My 3-step process to <br className="hidden md:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#a855f7] to-[#38bdf8] font-bold">deliver digital solutions.</span>
           </motion.h2>
         </div>
 
         {/* Process Steps Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 relative">
           {/* Connecting Line (Desktop Only) */}
           <div className="hidden md:block absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-foreground/10 to-transparent -translate-y-1/2" />
 
@@ -68,24 +68,24 @@ export default function Process() {
               className="relative group"
             >
               {/* Step Card */}
-              <div className={`relative z-10 bg-background border border-foreground/5 ${step.border} rounded-[40px] p-10 h-full transition-all duration-500 group-hover:-translate-y-4 shadow-2xl overflow-hidden`}>
+              <div className={`relative z-10 bg-background border border-foreground/5 ${step.border} rounded-[32px] sm:rounded-[40px] p-6 sm:p-10 h-full transition-all duration-500 group-hover:-translate-y-4 shadow-2xl overflow-hidden`}>
                 
                 {/* Glow Background */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${step.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
 
                 {/* Step Number & Icon */}
-                <div className="flex justify-between items-start mb-12 relative z-10">
+                <div className="flex justify-between items-start mb-8 sm:mb-12 relative z-10">
                   <div className="p-4 bg-foreground/5 rounded-2xl border border-foreground/10 text-foreground group-hover:scale-110 transition-transform duration-500">
                     {step.icon}
                   </div>
-                  <span className="text-5xl font-black text-foreground/5 group-hover:text-foreground/10 transition-colors">
+                  <span className="text-4xl sm:text-5xl font-black text-foreground/5 group-hover:text-foreground/10 transition-colors">
                     {step.id}
                   </span>
                 </div>
 
                 {/* Content */}
                 <div className="relative z-10 space-y-4">
-                  <h3 className="text-2xl font-bold text-foreground group-hover:text-brandPurple transition-colors">
+                  <h3 className="text-xl sm:text-2xl font-bold text-foreground group-hover:text-brandPurple transition-colors">
                     {step.title}
                   </h3>
                   <p className="text-foreground/60 text-sm md:text-base leading-relaxed">

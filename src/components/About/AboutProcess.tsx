@@ -29,10 +29,10 @@ export default function AboutProcess() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div className="max-w-xl">
-            <h2 className="text-[32px] md:text-[48px] font-bold text-foreground mb-4 leading-tight">
+            <h2 className="text-[26px] sm:text-[34px] md:text-[48px] font-bold text-foreground mb-4 leading-tight">
               Our Structural <span className="text-[#4ade80]">Process</span>
             </h2>
-            <p className="text-foreground/60 text-lg font-light">
+            <p className="text-foreground/60 text-base md:text-lg font-light">
               How we take your idea from a concept to a high-performing digital product.
             </p>
           </div>

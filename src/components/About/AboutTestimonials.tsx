@@ -59,7 +59,7 @@ export default function AboutTestimonials() {
           <span className="text-brandPurple font-bold tracking-[0.3em] uppercase text-xs block mb-4">
             / Testimonials
           </span>
-          <h2 className="text-3xl md:text-5xl font-black text-foreground mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-black text-foreground mb-4">
             What My <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandPurple to-brandBlue">Clients</span> Say
           </h2>
           <p className="text-foreground/60 text-base md:text-lg font-light">
@@ -89,7 +89,7 @@ export default function AboutTestimonials() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -8 }}
-                className="p-8 rounded-3xl border border-foreground/5 bg-foreground/[0.02] dark:bg-white/[0.02] backdrop-blur-sm flex flex-col justify-between h-full min-h-[300px] transition-all duration-500 hover:border-brandPurple/30 hover:shadow-2xl hover:shadow-brandPurple/5"
+                className="p-6 sm:p-8 rounded-3xl border border-foreground/5 bg-foreground/[0.02] dark:bg-white/[0.02] backdrop-blur-sm flex flex-col justify-between h-full min-h-[300px] transition-all duration-500 hover:border-brandPurple/30 hover:shadow-2xl hover:shadow-brandPurple/5"
               >
                 <div>
                   <Quote className="w-8 h-8 text-brandPurple/20 mb-6" />

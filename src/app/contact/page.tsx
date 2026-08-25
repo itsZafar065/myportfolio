@@ -23,7 +23,7 @@ export default function ContactPage() {
               / Contact Us
             </span>
             <h1 className="text-4xl md:text-6xl font-black text-foreground leading-tight">
-              Let’s create something <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandBlue to-brandGreen">exceptional</span> together.
+              Let us create something <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandBlue to-brandGreen">exceptional</span> together.
             </h1>
             <p className="text-foreground/70 text-lg leading-relaxed">
               Trusted by over 5,000 clients, we help businesses grow with tailored digital solutions and expert support.
@@ -106,7 +106,7 @@ export default function ContactPage() {
             <div className="relative z-10 space-y-8">
               <div className="space-y-2">
                 <h3 className="text-2xl font-bold text-foreground">Send a Message</h3>
-                <p className="text-foreground/50 text-sm">We'll get back to you within 24 hours.</p>
+                <p className="text-foreground/50 text-sm">We will get back to you within 24 hours.</p>
               </div>
 
               <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>

@@ -19,26 +19,26 @@ export default function Hero() {
           <div className="space-y-4">
             {/* Small Badge */}
             <div className="inline-flex px-4 py-1.5 rounded-full bg-brandPurple/10 border border-brandPurple/20 text-brandPurple text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase mx-auto lg:mx-0">
-              I'm a Full Stack Developer
+              I am a Full Stack Developer
             </div>
 
             {/* Headings */}
-            <h1 className="text-[36px] md:text-[54px] lg:text-[64px] font-black text-foreground leading-tight tracking-tight">
-              Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandPurple to-brandBlue">Zafar</span>
+            <h1 className="text-[32px] sm:text-[48px] md:text-[54px] lg:text-[64px] font-black text-foreground leading-tight tracking-tight">
+              Hi, I am <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandPurple to-brandBlue">Zafar</span>
             </h1>
-            <h2 className="text-[24px] md:text-[36px] lg:text-[44px] font-extrabold text-foreground/90 leading-tight">
+            <h2 className="text-[20px] sm:text-[30px] md:text-[36px] lg:text-[44px] font-extrabold text-foreground/90 leading-tight">
               I build things for the web.
             </h2>
             
             <p className="text-foreground/60 text-sm md:text-base max-w-xl mx-auto lg:mx-0 leading-relaxed font-light">
-              I'm a passionate web developer specializing in building exceptional digital experiences with modern technologies (React, Next.js, WordPress, and Custom Software).
+              I am a passionate web developer specializing in building exceptional digital experiences with modern technologies (React, Next.js, WordPress, and Custom Software).
             </p>
           </div>
 
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
             <Magnetic>
-              <a href="/portfolio" className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-brandPurple to-brandBlue hover:from-brandPurple/90 hover:to-brandBlue/90 text-white font-bold text-sm px-8 py-4 rounded-xl shadow-lg shadow-brandPurple/20 transition-all duration-300 transform hover:-translate-y-0.5">
+              <a href="/portfolio" className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-brandPurple to-brandBlue hover:from-brandPurple/90 hover:to-brandBlue/90 text-white font-bold text-sm px-8 py-4 rounded-xl shadow-lg shadow-brandPurple/20 transition-all duration-300">
                 View My Work <ArrowRight size={16} />
               </a>
             </Magnetic>
@@ -81,7 +81,7 @@ export default function Hero() {
 
         {/* RIGHT VISUAL */}
         <div className="lg:col-span-5 relative flex justify-center items-center mt-12 lg:mt-0">
-          <div className="relative w-full aspect-square max-w-[320px] md:max-w-[420px] flex items-center justify-center">
+          <div className="relative w-full aspect-square max-w-[270px] sm:max-w-[320px] md:max-w-[420px] flex items-center justify-center">
             
             {/* Glowing Backdrop Circle */}
             <div className="absolute w-[80%] aspect-square bg-gradient-to-br from-brandPurple to-brandBlue rounded-full opacity-60 blur-md z-0" />
@@ -98,12 +98,12 @@ export default function Hero() {
             </div>
 
             {/* Floating Terminal Code Card */}
-            <div className="absolute bottom-[0%] right-[-10%] md:right-[-15%] bg-[#080616]/90 border border-white/10 rounded-2xl p-4 shadow-2xl z-20 backdrop-blur-md max-w-[220px] md:max-w-[260px] font-mono text-[10px] md:text-xs text-white/80 space-y-2">
+            <div className="absolute bottom-[-2%] right-[-4%] sm:right-[-10%] md:right-[-15%] bg-[#080616]/90 border border-white/10 rounded-2xl p-3 sm:p-4 shadow-2xl z-20 backdrop-blur-md max-w-[180px] xs:max-w-[220px] md:max-w-[260px] font-mono text-[9px] xs:text-[10px] md:text-xs text-white/80 space-y-1.5 sm:space-y-2">
               <div className="flex items-center gap-1.5 border-b border-white/10 pb-2 mb-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-red-500" />
                 <span className="w-2.5 h-2.5 rounded-full bg-yellow-500" />
                 <span className="w-2.5 h-2.5 rounded-full bg-green-500" />
-                <span className="text-[9px] text-white/30 ml-2">zafar.json</span>
+                <span className="text-[8px] xs:text-[9px] text-white/30 ml-2">zafar.json</span>
               </div>
               <div>
                 <span className="text-brandPurple">const</span> developer = &#123;

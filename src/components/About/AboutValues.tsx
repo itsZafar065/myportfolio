@@ -12,7 +12,7 @@ const values = [
   {
     icon: <Headset className="w-8 h-8 text-[#4ade80]" />,
     title: "Top-Notch Support",
-    desc: "We don't just deliver and leave. Our dedicated support team is available 24/7 to ensure your systems run smoothly and any issues are resolved instantly."
+    desc: "We do not just deliver and leave. Our dedicated support team is available 24/7 to ensure your systems run smoothly and any issues are resolved instantly."
   },
   {
     icon: <Layout className="w-8 h-8 text-[#fb923c]" />,
